@@ -10,6 +10,9 @@ const {
 } = require('express')
 
 const app = express()
+// Setup for Heroku 
+// If found the port at heroku, 3000 otherwise
+const port = process.env.PORT || 3000
 
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -82,13 +85,10 @@ app.get('/weather', (req, res) => {
             } else if (!error) {
                 
                 forecast(latitude, longitude, (error, {body:{current:weatherForecast}} = {}) => {
-                   
                     if (error) {
                         return res.send({ error })
                     } else if (!error) {
-                       
                         // weatherForecast = fResponse.body.current
-
                         res.send({
                             location,
                             temp: weatherForecast.temp,
@@ -111,6 +111,6 @@ app.get('/*', (req, res) => {
 })
 
 //Start the Server
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.');
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })

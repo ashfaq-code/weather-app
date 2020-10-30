@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{indexTitle}}</title>
-        <link rel="icon" href="/img/weather.png">
-        <link rel="stylesheet" href="/css/styles.css">
-    </head>
 
-    <body>
-        <div class="main-content">
-            {{>header}}
-            <p>Use this site to get your weather!</p>
-            <form action="#">
-                <input type="text" placeholder="Location">
-                <button>Search</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{indexTitle}}</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get your weather!</p>
+        <form action="#">
+            <input type="text" placeholder="Location">
+            <button>Search</button>
                 <p id="message-address"></p>
-                <p id="message-weather"></p>
+            <div class="show-weather">
+                <p id="message-weather-1"></p>
+                <p id="message-weather-2"></p>
+                <p id="message-weather-3"></p>
+                <p id="message-weather-4"></p>
                 <p id="message-error"></p>
-            </form>
-        </div>
-        
-            <p>Created by {{name}}</p>
-        {{>footer}}
-        <script src="/js/app.js"></script>
-    </body>
+            </div>
+        </form>
+    </div>
+
+    <p>Created by {{name}}</p>
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+
 </html>

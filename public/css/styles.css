@@ -23,7 +23,6 @@ input, button {
 }
 button{
     cursor: pointer;
-
 }
 h1{
     font-size: 54px;
@@ -44,7 +43,9 @@ footer{
     padding: 15px;
     border-top: 1px solid darkslategrey;
 }
-
-#message-address, #message-weather, #message-weather{
+#message-address{
     font-size: 30px;
+}
+.show-weather{
+    font-size: 20px;
 }
