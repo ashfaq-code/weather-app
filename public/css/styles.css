@@ -1,0 +1,50 @@
+body{
+    max-width: 990px;
+    margin: auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body,a {
+    font-family: 'Ubuntu mono';
+    color: darkslategrey;
+    font-size: 20px;
+}
+.main-content{
+    flex-grow: 2;
+}
+input, button {
+    font-size: 18px;
+    color: darkslategrey;
+    border: 1px solid darkslategrey;
+    padding: 8px;
+    border-radius: 4px;
+}
+button{
+    cursor: pointer;
+
+}
+h1{
+    font-size: 54px;
+}
+a:link{
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 6px;
+    border-radius: 4px;
+}
+a:hover{
+    text-decoration: none;
+    background: darkslategray;
+    color: white;
+}
+footer{
+    color: darkslategrey;
+    padding: 15px;
+    border-top: 1px solid darkslategrey;
+}
+
+#message-address, #message-weather, #message-weather{
+    font-size: 30px;
+}
