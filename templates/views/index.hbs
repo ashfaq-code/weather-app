@@ -12,7 +12,7 @@
 <body>
     <div class="main-content">
         {{>header}}
-        <p>Use this site to get your weather!</p>
+        <p class="statement">Use this site to get your weather!</p>
         <form action="#">
             <input type="text" placeholder="Location">
             <button>Search</button>
@@ -27,7 +27,7 @@
         </form>
     </div>
 
-    <p>Created by {{name}}</p>
+    <p class="credit">{{credit}}</p>
     {{>footer}}
     <script src="/js/app.js"></script>
 </body>

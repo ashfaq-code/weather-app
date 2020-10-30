@@ -27,42 +27,45 @@ hbs.registerPartials(partialsPath)
 //Setup static directory to server
 app.use(express.static(publicDirectoryPath));
 
+
+const credit = "Developed by Ashfaq Ahmad"
 //Visit home page
 app.get('', (req, res) => {
     res.render('index', {
         name: 'Ashfaq Ahmad',
-        indexTitle: 'Express Home',
+        indexTitle: 'Weather',
         title: 'Weather App',
+        credit,
     })
 })
 //Visit about page
 app.get('/about', (req, res) => {
     res.render('about', {
-        aboutTitle: 'Express About',
-        aboutPara: 'This paragraph is about us.',
-        title: 'Weather App About: Dynamic'
-
+        aboutTitle: 'About',
+        title: 'Weather App',
+        credit,
     })
 })
 //Visit sub pages of about which are not exist 
 app.get('/about/*', (req, res) => {
     res.render('404', {
         title: 'About notes not found!',
+        credit,
     })
 })
 //Visit help page
 app.get('/help', (req, res) => {
     res.render('help', {
-        aboutTitle: 'Express About',
-        aboutPara: 'This paragraph is about us.',
-        title: 'Weather App Help: Dynamic'
-
+        helpTitle: 'Help',
+        title: 'Weather App',
+        credit,
     })
 })
 //Visit sub pages of help which are not exist
 app.get('/help/*', (req, res) => {
     res.render('404', {
-        title: 'Help article not found!'
+        title: 'Help article not found!',
+        credit,
     })
 })
 
