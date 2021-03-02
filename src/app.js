@@ -1,5 +1,5 @@
 //Start nodemon with multiple extentions will restart server on changes in mentioned extensions
-// In this file: nodemon src/app.js -e js, hbs (-e : extension)
+// In this file: nodemon src/app.js -e js, hbs (-e => extension)
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const path = require('path')
