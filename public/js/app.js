@@ -14,6 +14,8 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     message.textContent = 'Loading...'
     temperature.textContent = ''
+    humidity.textContent = ''
+    wind_speed.textContent = ''
 
     fetch('/weather?address=' + encodeURIComponent(search.value)).then((response) => {
         response.json().then((data) => {
